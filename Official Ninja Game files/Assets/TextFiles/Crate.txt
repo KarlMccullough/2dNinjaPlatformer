@@ -1,0 +1,2 @@
+You can jump on crates to reach higher platforms!
+Be careful! Pressing the move and jump button at the same time will cancel out your jump.

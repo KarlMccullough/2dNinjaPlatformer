@@ -1,0 +1,2 @@
+Use the '+' button to use your sword!
+Use the 'X' button to throw your knife!
