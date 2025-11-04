@@ -52,6 +52,8 @@ Thumbs.db
 # Android dependencies (auto-generated)
 Assets/Plugins/Android/*.jar
 Assets/Plugins/Android/*.aar
+Assets/Plugins/Android/*.meta
+Assets/Plugins/Android/**/*.meta
 Assets/Plugins/Android/AndroidManifest.xml
 Assets/ExternalDependencyManager/
 Assets/GooglePlayGames/
