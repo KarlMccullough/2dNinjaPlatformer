@@ -18,6 +18,8 @@
 *.mdb
 *.opendb
 *.VC.db
+*.csproj
+*.sln
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -44,6 +46,10 @@ crashlytics-build.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
 
 # Keystore files (keep these private)
 *.keystore
