@@ -12,7 +12,7 @@ public class AttackBehaviour : StateMachineBehaviour
     {
         //animator.GetComponent<Character>().Attack = true;
 
-        if (animator.tag == "Enemy")
+        if (animator.CompareTag("Enemy"))
         {
             animator.GetComponent<Character>().Attack = true;
         }
@@ -23,14 +23,14 @@ public class AttackBehaviour : StateMachineBehaviour
 
         //Player.Instance.Attack = true;
 
-        if (animator.tag == "Player")
+        if (animator.CompareTag("Player"))
         {
             Player.Instance.audioManager.PlaySound("Attack Sound");
             animator.GetComponent<Character>().Attack = true;
             if (Player.Instance.OnGround)
             {
 
-                Player.Instance.Rb.velocity = Vector2.zero;
+                Player.Instance.Rb.linearVelocity = Vector2.zero;
 
             }
 

@@ -411,7 +411,7 @@ TextureImporter:
       213: 21300270
     second: Button_135
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -428,10 +428,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -470,6 +472,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -481,6 +485,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -493,6 +498,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -505,6 +511,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -3376,9 +3383,145 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Button_0: 21300000
+      Button_1: 21300002
+      Button_10: 21300020
+      Button_100: 21300200
+      Button_101: 21300202
+      Button_102: 21300204
+      Button_103: 21300206
+      Button_104: 21300208
+      Button_105: 21300210
+      Button_106: 21300212
+      Button_107: 21300214
+      Button_108: 21300216
+      Button_109: 21300218
+      Button_11: 21300022
+      Button_110: 21300220
+      Button_111: 21300222
+      Button_112: 21300224
+      Button_113: 21300226
+      Button_114: 21300228
+      Button_115: 21300230
+      Button_116: 21300232
+      Button_117: 21300234
+      Button_118: 21300236
+      Button_119: 21300238
+      Button_12: 21300024
+      Button_120: 21300240
+      Button_121: 21300242
+      Button_122: 21300244
+      Button_123: 21300246
+      Button_124: 21300248
+      Button_125: 21300250
+      Button_126: 21300252
+      Button_127: 21300254
+      Button_128: 21300256
+      Button_129: 21300258
+      Button_13: 21300026
+      Button_130: 21300260
+      Button_131: 21300262
+      Button_132: 21300264
+      Button_133: 21300266
+      Button_134: 21300268
+      Button_135: 21300270
+      Button_14: 21300028
+      Button_15: 21300030
+      Button_16: 21300032
+      Button_17: 21300034
+      Button_18: 21300036
+      Button_19: 21300038
+      Button_2: 21300004
+      Button_20: 21300040
+      Button_21: 21300042
+      Button_22: 21300044
+      Button_23: 21300046
+      Button_24: 21300048
+      Button_25: 21300050
+      Button_26: 21300052
+      Button_27: 21300054
+      Button_28: 21300056
+      Button_29: 21300058
+      Button_3: 21300006
+      Button_30: 21300060
+      Button_31: 21300062
+      Button_32: 21300064
+      Button_33: 21300066
+      Button_34: 21300068
+      Button_35: 21300070
+      Button_36: 21300072
+      Button_37: 21300074
+      Button_38: 21300076
+      Button_39: 21300078
+      Button_4: 21300008
+      Button_40: 21300080
+      Button_41: 21300082
+      Button_42: 21300084
+      Button_43: 21300086
+      Button_44: 21300088
+      Button_45: 21300090
+      Button_46: 21300092
+      Button_47: 21300094
+      Button_48: 21300096
+      Button_49: 21300098
+      Button_5: 21300010
+      Button_50: 21300100
+      Button_51: 21300102
+      Button_52: 21300104
+      Button_53: 21300106
+      Button_54: 21300108
+      Button_55: 21300110
+      Button_56: 21300112
+      Button_57: 21300114
+      Button_58: 21300116
+      Button_59: 21300118
+      Button_6: 21300012
+      Button_60: 21300120
+      Button_61: 21300122
+      Button_62: 21300124
+      Button_63: 21300126
+      Button_64: 21300128
+      Button_65: 21300130
+      Button_66: 21300132
+      Button_67: 21300134
+      Button_68: 21300136
+      Button_69: 21300138
+      Button_7: 21300014
+      Button_70: 21300140
+      Button_71: 21300142
+      Button_72: 21300144
+      Button_73: 21300146
+      Button_74: 21300148
+      Button_75: 21300150
+      Button_76: 21300152
+      Button_77: 21300154
+      Button_78: 21300156
+      Button_79: 21300158
+      Button_8: 21300016
+      Button_80: 21300160
+      Button_81: 21300162
+      Button_82: 21300164
+      Button_83: 21300166
+      Button_84: 21300168
+      Button_85: 21300170
+      Button_86: 21300172
+      Button_87: 21300174
+      Button_88: 21300176
+      Button_89: 21300178
+      Button_9: 21300018
+      Button_90: 21300180
+      Button_91: 21300182
+      Button_92: 21300184
+      Button_93: 21300186
+      Button_94: 21300188
+      Button_95: 21300190
+      Button_96: 21300192
+      Button_97: 21300194
+      Button_98: 21300196
+      Button_99: 21300198
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

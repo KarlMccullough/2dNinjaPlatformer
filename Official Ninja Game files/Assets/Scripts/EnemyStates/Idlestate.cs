@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Idlestate : IEnemyState
@@ -12,16 +10,15 @@ public class Idlestate : IEnemyState
 
     public void Enter(Enemy enemy)
     {
-        idleDuration = UnityEngine.Random.Range(1, 5);
+        idleDuration = Random.Range(1, 5);
         this.enemy = enemy;
-        
     }
 
     public void Execute()
     {
         Idle();
 
-        if (enemy.Target != null )
+        if (enemy.Target != null)
         {
             enemy.ChangeState(new PatrolState());
         }
@@ -29,17 +26,14 @@ public class Idlestate : IEnemyState
 
     public void Exit()
     {
-        
     }
 
     public void OnTriggerEnter(Collider2D other)
     {
-        if (other.tag == "Knife")
+        if (other.CompareTag("Knife"))
         {
             enemy.Target = Player.Instance.gameObject;
-
         }
-        
     }
 
     private void Idle()

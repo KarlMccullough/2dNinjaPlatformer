@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RangedState : IEnemyState
@@ -35,12 +33,10 @@ public class RangedState : IEnemyState
 
     public void Exit()
     {
-       
     }
 
     public void OnTriggerEnter(Collider2D other)
     {
-        
     }
 
     private void ThrowKnife()
@@ -58,7 +54,5 @@ public class RangedState : IEnemyState
             canThrow = false;
             enemy.MyAnimator.SetTrigger("throw");
         }
-
-
     }
 }

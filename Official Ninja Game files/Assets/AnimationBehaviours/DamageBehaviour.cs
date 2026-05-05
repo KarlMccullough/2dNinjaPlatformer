@@ -9,7 +9,7 @@ public class DamageBehaviour : StateMachineBehaviour {
     {
         animator.GetComponent<Character>().TakingDamage = true;
 
-        animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        animator.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
        
     }
 

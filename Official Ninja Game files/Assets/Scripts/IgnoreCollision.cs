@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IgnoreCollision : MonoBehaviour
@@ -7,7 +5,7 @@ public class IgnoreCollision : MonoBehaviour
     [SerializeField]
     private Collider2D other;
 
-	private void Awake()
+    private void Awake()
     {
         if (other != null)
         {

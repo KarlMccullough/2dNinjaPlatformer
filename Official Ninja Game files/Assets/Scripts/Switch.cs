@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Switch : MonoBehaviour
@@ -34,26 +32,16 @@ public class Switch : MonoBehaviour
     {
         audioManager = AudioManager.instance;
         gameObject.GetComponent<SpriteRenderer>().sprite = switchOff.GetComponent<SpriteRenderer>().sprite;
-
-       
     }
+
     public void OnTriggerEnter2D(Collider2D col)
     {
-        
-        if (!alreadyplayed && col.tag == "Player")
+        if (!alreadyplayed && col.CompareTag("Player"))
         {
             isOn = true;
             gameObject.GetComponent<SpriteRenderer>().sprite = switchOn.GetComponent<SpriteRenderer>().sprite;
-
             audioManager.PlaySound("Switch Sound");
             alreadyplayed = true;
         }
-       
-        
-        
-        
     }
-  
-
-
 }

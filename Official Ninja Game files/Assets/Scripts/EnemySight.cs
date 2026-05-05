@@ -1,24 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySight : MonoBehaviour {
-
+public class EnemySight : MonoBehaviour
+{
     [SerializeField]
     private Enemy enemy;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             enemy.Target = other.gameObject;
         }
 
-        if (other.tag == "Knife")
+        if (other.CompareTag("Knife"))
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
         }
-        if (other.tag == "EnemyKnife")
+        if (other.CompareTag("EnemyKnife"))
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
         }
@@ -26,7 +24,7 @@ public class EnemySight : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             enemy.Target = null;
         }

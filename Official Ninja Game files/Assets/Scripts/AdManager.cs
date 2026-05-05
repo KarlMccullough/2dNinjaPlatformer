@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using admob;
-using GoogleMobileAds.Api;
-
 
 public class AdManager : MonoBehaviour
 {
@@ -13,8 +8,8 @@ public class AdManager : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
-        // Admob.Instance().a
-        
     }
+
+    // TODO: Implement new Google Mobile Ads SDK integration for Unity 6
+    // See: https://developers.google.com/admob/unity/quick-start
 }

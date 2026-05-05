@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player
+  - Enemy
+  - enemy
+  - Coin
+  - Spikes
+  - blade
+  - thorns
+  - Knife
+  - EnemyKnife
+  - Edge
+  - Water
   layers:
   - Default
   - TransparentFX

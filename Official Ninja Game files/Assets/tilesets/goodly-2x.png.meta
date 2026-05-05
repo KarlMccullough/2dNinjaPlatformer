@@ -771,7 +771,7 @@ TextureImporter:
       213: 21300510
     second: goodly-2x_255
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -788,10 +788,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -830,6 +832,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -841,6 +845,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -853,6 +858,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -865,6 +871,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -6548,9 +6555,265 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      goodly-2x_0: 21300000
+      goodly-2x_1: 21300002
+      goodly-2x_10: 21300020
+      goodly-2x_100: 21300200
+      goodly-2x_101: 21300202
+      goodly-2x_102: 21300204
+      goodly-2x_103: 21300206
+      goodly-2x_104: 21300208
+      goodly-2x_105: 21300210
+      goodly-2x_106: 21300212
+      goodly-2x_107: 21300214
+      goodly-2x_108: 21300216
+      goodly-2x_109: 21300218
+      goodly-2x_11: 21300022
+      goodly-2x_110: 21300220
+      goodly-2x_111: 21300222
+      goodly-2x_112: 21300224
+      goodly-2x_113: 21300226
+      goodly-2x_114: 21300228
+      goodly-2x_115: 21300230
+      goodly-2x_116: 21300232
+      goodly-2x_117: 21300234
+      goodly-2x_118: 21300236
+      goodly-2x_119: 21300238
+      goodly-2x_12: 21300024
+      goodly-2x_120: 21300240
+      goodly-2x_121: 21300242
+      goodly-2x_122: 21300244
+      goodly-2x_123: 21300246
+      goodly-2x_124: 21300248
+      goodly-2x_125: 21300250
+      goodly-2x_126: 21300252
+      goodly-2x_127: 21300254
+      goodly-2x_128: 21300256
+      goodly-2x_129: 21300258
+      goodly-2x_13: 21300026
+      goodly-2x_130: 21300260
+      goodly-2x_131: 21300262
+      goodly-2x_132: 21300264
+      goodly-2x_133: 21300266
+      goodly-2x_134: 21300268
+      goodly-2x_135: 21300270
+      goodly-2x_136: 21300272
+      goodly-2x_137: 21300274
+      goodly-2x_138: 21300276
+      goodly-2x_139: 21300278
+      goodly-2x_14: 21300028
+      goodly-2x_140: 21300280
+      goodly-2x_141: 21300282
+      goodly-2x_142: 21300284
+      goodly-2x_143: 21300286
+      goodly-2x_144: 21300288
+      goodly-2x_145: 21300290
+      goodly-2x_146: 21300292
+      goodly-2x_147: 21300294
+      goodly-2x_148: 21300296
+      goodly-2x_149: 21300298
+      goodly-2x_15: 21300030
+      goodly-2x_150: 21300300
+      goodly-2x_151: 21300302
+      goodly-2x_152: 21300304
+      goodly-2x_153: 21300306
+      goodly-2x_154: 21300308
+      goodly-2x_155: 21300310
+      goodly-2x_156: 21300312
+      goodly-2x_157: 21300314
+      goodly-2x_158: 21300316
+      goodly-2x_159: 21300318
+      goodly-2x_16: 21300032
+      goodly-2x_160: 21300320
+      goodly-2x_161: 21300322
+      goodly-2x_162: 21300324
+      goodly-2x_163: 21300326
+      goodly-2x_164: 21300328
+      goodly-2x_165: 21300330
+      goodly-2x_166: 21300332
+      goodly-2x_167: 21300334
+      goodly-2x_168: 21300336
+      goodly-2x_169: 21300338
+      goodly-2x_17: 21300034
+      goodly-2x_170: 21300340
+      goodly-2x_171: 21300342
+      goodly-2x_172: 21300344
+      goodly-2x_173: 21300346
+      goodly-2x_174: 21300348
+      goodly-2x_175: 21300350
+      goodly-2x_176: 21300352
+      goodly-2x_177: 21300354
+      goodly-2x_178: 21300356
+      goodly-2x_179: 21300358
+      goodly-2x_18: 21300036
+      goodly-2x_180: 21300360
+      goodly-2x_181: 21300362
+      goodly-2x_182: 21300364
+      goodly-2x_183: 21300366
+      goodly-2x_184: 21300368
+      goodly-2x_185: 21300370
+      goodly-2x_186: 21300372
+      goodly-2x_187: 21300374
+      goodly-2x_188: 21300376
+      goodly-2x_189: 21300378
+      goodly-2x_19: 21300038
+      goodly-2x_190: 21300380
+      goodly-2x_191: 21300382
+      goodly-2x_192: 21300384
+      goodly-2x_193: 21300386
+      goodly-2x_194: 21300388
+      goodly-2x_195: 21300390
+      goodly-2x_196: 21300392
+      goodly-2x_197: 21300394
+      goodly-2x_198: 21300396
+      goodly-2x_199: 21300398
+      goodly-2x_2: 21300004
+      goodly-2x_20: 21300040
+      goodly-2x_200: 21300400
+      goodly-2x_201: 21300402
+      goodly-2x_202: 21300404
+      goodly-2x_203: 21300406
+      goodly-2x_204: 21300408
+      goodly-2x_205: 21300410
+      goodly-2x_206: 21300412
+      goodly-2x_207: 21300414
+      goodly-2x_208: 21300416
+      goodly-2x_209: 21300418
+      goodly-2x_21: 21300042
+      goodly-2x_210: 21300420
+      goodly-2x_211: 21300422
+      goodly-2x_212: 21300424
+      goodly-2x_213: 21300426
+      goodly-2x_214: 21300428
+      goodly-2x_215: 21300430
+      goodly-2x_216: 21300432
+      goodly-2x_217: 21300434
+      goodly-2x_218: 21300436
+      goodly-2x_219: 21300438
+      goodly-2x_22: 21300044
+      goodly-2x_220: 21300440
+      goodly-2x_221: 21300442
+      goodly-2x_222: 21300444
+      goodly-2x_223: 21300446
+      goodly-2x_224: 21300448
+      goodly-2x_225: 21300450
+      goodly-2x_226: 21300452
+      goodly-2x_227: 21300454
+      goodly-2x_228: 21300456
+      goodly-2x_229: 21300458
+      goodly-2x_23: 21300046
+      goodly-2x_230: 21300460
+      goodly-2x_231: 21300462
+      goodly-2x_232: 21300464
+      goodly-2x_233: 21300466
+      goodly-2x_234: 21300468
+      goodly-2x_235: 21300470
+      goodly-2x_236: 21300472
+      goodly-2x_237: 21300474
+      goodly-2x_238: 21300476
+      goodly-2x_239: 21300478
+      goodly-2x_24: 21300048
+      goodly-2x_240: 21300480
+      goodly-2x_241: 21300482
+      goodly-2x_242: 21300484
+      goodly-2x_243: 21300486
+      goodly-2x_244: 21300488
+      goodly-2x_245: 21300490
+      goodly-2x_246: 21300492
+      goodly-2x_247: 21300494
+      goodly-2x_248: 21300496
+      goodly-2x_249: 21300498
+      goodly-2x_25: 21300050
+      goodly-2x_250: 21300500
+      goodly-2x_251: 21300502
+      goodly-2x_252: 21300504
+      goodly-2x_253: 21300506
+      goodly-2x_254: 21300508
+      goodly-2x_255: 21300510
+      goodly-2x_26: 21300052
+      goodly-2x_27: 21300054
+      goodly-2x_28: 21300056
+      goodly-2x_29: 21300058
+      goodly-2x_3: 21300006
+      goodly-2x_30: 21300060
+      goodly-2x_31: 21300062
+      goodly-2x_32: 21300064
+      goodly-2x_33: 21300066
+      goodly-2x_34: 21300068
+      goodly-2x_35: 21300070
+      goodly-2x_36: 21300072
+      goodly-2x_37: 21300074
+      goodly-2x_38: 21300076
+      goodly-2x_39: 21300078
+      goodly-2x_4: 21300008
+      goodly-2x_40: 21300080
+      goodly-2x_41: 21300082
+      goodly-2x_42: 21300084
+      goodly-2x_43: 21300086
+      goodly-2x_44: 21300088
+      goodly-2x_45: 21300090
+      goodly-2x_46: 21300092
+      goodly-2x_47: 21300094
+      goodly-2x_48: 21300096
+      goodly-2x_49: 21300098
+      goodly-2x_5: 21300010
+      goodly-2x_50: 21300100
+      goodly-2x_51: 21300102
+      goodly-2x_52: 21300104
+      goodly-2x_53: 21300106
+      goodly-2x_54: 21300108
+      goodly-2x_55: 21300110
+      goodly-2x_56: 21300112
+      goodly-2x_57: 21300114
+      goodly-2x_58: 21300116
+      goodly-2x_59: 21300118
+      goodly-2x_6: 21300012
+      goodly-2x_60: 21300120
+      goodly-2x_61: 21300122
+      goodly-2x_62: 21300124
+      goodly-2x_63: 21300126
+      goodly-2x_64: 21300128
+      goodly-2x_65: 21300130
+      goodly-2x_66: 21300132
+      goodly-2x_67: 21300134
+      goodly-2x_68: 21300136
+      goodly-2x_69: 21300138
+      goodly-2x_7: 21300014
+      goodly-2x_70: 21300140
+      goodly-2x_71: 21300142
+      goodly-2x_72: 21300144
+      goodly-2x_73: 21300146
+      goodly-2x_74: 21300148
+      goodly-2x_75: 21300150
+      goodly-2x_76: 21300152
+      goodly-2x_77: 21300154
+      goodly-2x_78: 21300156
+      goodly-2x_79: 21300158
+      goodly-2x_8: 21300016
+      goodly-2x_80: 21300160
+      goodly-2x_81: 21300162
+      goodly-2x_82: 21300164
+      goodly-2x_83: 21300166
+      goodly-2x_84: 21300168
+      goodly-2x_85: 21300170
+      goodly-2x_86: 21300172
+      goodly-2x_87: 21300174
+      goodly-2x_88: 21300176
+      goodly-2x_89: 21300178
+      goodly-2x_9: 21300018
+      goodly-2x_90: 21300180
+      goodly-2x_91: 21300182
+      goodly-2x_92: 21300184
+      goodly-2x_93: 21300186
+      goodly-2x_94: 21300188
+      goodly-2x_95: 21300190
+      goodly-2x_96: 21300192
+      goodly-2x_97: 21300194
+      goodly-2x_98: 21300196
+      goodly-2x_99: 21300198
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

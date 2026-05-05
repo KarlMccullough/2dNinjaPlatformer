@@ -1,24 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-
-    //protected Animator myAnimator;
-
     public Animator MyAnimator { get; private set; }
-
-    //[SerializeField]
-    //protected int health;
-
-    
 
     [SerializeField]
     protected stat healthStat;
-
-
-    
 
     [SerializeField]
     private EdgeCollider2D swordCollider;
@@ -27,7 +16,6 @@ public abstract class Character : MonoBehaviour
     private List<string> damageSources;
 
     public abstract bool IsDead { get; }
-
 
     [SerializeField]
     protected Transform knifePos;
@@ -50,23 +38,14 @@ public abstract class Character : MonoBehaviour
         {
             return swordCollider;
         }
-
-       
     }
 
-    // Use this for initialization
-    public virtual void Start () {
+    public virtual void Start()
+    {
         facingRight = true;
         MyAnimator = GetComponent<Animator>();
-
         healthStat.Initialize();
-
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public abstract IEnumerator TakeDamage();
 
@@ -75,24 +54,19 @@ public abstract class Character : MonoBehaviour
     public virtual void ChangeDirection()
     {
         facingRight = !facingRight;
-
-        
         transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
-                              
-
-
     }
 
     public virtual void ThrowKnife(int value)
     {
         if (facingRight)
         {
-            GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
+            GameObject tmp = Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, -90)));
             tmp.GetComponent<Knife>().Intialize(Vector2.right);
         }
         else
         {
-            GameObject tmp = (GameObject)Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
+            GameObject tmp = Instantiate(knifePrefab, knifePos.position, Quaternion.Euler(new Vector3(0, 0, 90)));
             tmp.GetComponent<Knife>().Intialize(Vector2.left);
         }
     }
@@ -102,8 +76,6 @@ public abstract class Character : MonoBehaviour
         swordCollider.enabled = true;
     }
 
-
-
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (damageSources.Contains(other.tag))
@@ -111,7 +83,4 @@ public abstract class Character : MonoBehaviour
             StartCoroutine(TakeDamage());
         }
     }
-    
-
-    
 }

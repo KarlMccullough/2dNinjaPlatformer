@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -40,28 +38,27 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
-
     public AudioMixer audioMixer;
 
     public void SetMasterVolume(float masterLv)
     {
         audioMixer.SetFloat("MasterVolume", masterLv);
     }
+
     public void SetSFXVolume(float sfxLv)
     {
         audioMixer.SetFloat("SFXVolume", sfxLv);
     }
+
     public void SetMusicVolume(float musicLv)
     {
         audioMixer.SetFloat("MusicVolume", musicLv);
     }
 
-
     public static AudioManager instance;
 
     [SerializeField]
     Sound[] sound;
-
 
     public void Awake()
     {
@@ -97,9 +94,5 @@ public class AudioManager : MonoBehaviour
                 return;
             }
         }
-
-       
-        
     }
-
 }

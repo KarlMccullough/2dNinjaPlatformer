@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMovement : MonoBehaviour {
-
+public class PlatformMovement : MonoBehaviour
+{
     private Vector3 posA;
 
     private Vector3 posB;
@@ -18,24 +16,18 @@ public class PlatformMovement : MonoBehaviour {
 
     [SerializeField]
     private Transform transformB;
-    
 
-
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
         posA = childTransform.localPosition;
         posB = transformB.localPosition;
         nextPos = posB;
+    }
 
-
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    void Update()
     {
         Move();
-	}
+    }
 
     private void Move()
     {
@@ -54,31 +46,16 @@ public class PlatformMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player") //|| Player.Instance.IsFalling)
+        if (other.gameObject.CompareTag("Player"))
         {
-            //Player.Instance.MyAnimator.SetBool("land", false);
-
             if (Input.GetAxis("Horizontal") == Player.Instance.MyAnimator.GetFloat("speed"))
             {
                 Player.Instance.MyAnimator.SetBool("land", false);
             }
-            
 
-
-            
             other.gameObject.layer = 10;
-            
             other.transform.SetParent(childTransform);
-            
-            
-
         }
-        
-        /*if (Player.Instance.Jump)
-        {
-            
-            other.transform.SetParent(null);
-        }*/
     }
 
     private void OnCollisionExit2D(Collision2D other)

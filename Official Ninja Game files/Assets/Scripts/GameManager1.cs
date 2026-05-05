@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameManager1 : MonoBehaviour {
-
+public class GameManager1 : MonoBehaviour
+{
     private static GameManager1 instance;
 
     Door dr;
@@ -18,7 +16,6 @@ public class GameManager1 : MonoBehaviour {
     public string nextLevel = "Level02";
     public int levelToUnlock = 3;
     public SceneFader sceneFader;
-    
 
     [SerializeField]
     private Text coinTxt;
@@ -29,7 +26,7 @@ public class GameManager1 : MonoBehaviour {
     [SerializeField]
     GameObject exitDoor;
 
-    public int noOfSwitches;   //= 0;
+    public int noOfSwitches;
 
     [SerializeField]
     Text switchCount;
@@ -42,14 +39,12 @@ public class GameManager1 : MonoBehaviour {
         {
             collectedCoins = PlayerPrefs.GetInt("Score");
         }
-     
 
         dr = FindObjectOfType<Door>();
         audioManager = AudioManager.instance;
 
         GetNoOfSwitches();
     }
-
 
     public static GameManager1 Instance
     {
@@ -77,7 +72,6 @@ public class GameManager1 : MonoBehaviour {
         {
             audioManager.PlaySound("Coin Sound");
             return collectedCoins;
-           
         }
 
         set
@@ -91,14 +85,9 @@ public class GameManager1 : MonoBehaviour {
 
     public void LoadNextLevel(int x)
     {
-       
         SceneManager.LoadScene(x);
     }
 
-  
-   
-
-   
     public int GetNoOfSwitches()
     {
         int x = 0;
@@ -127,25 +116,15 @@ public class GameManager1 : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-
         switchCount.text = GetNoOfSwitches().ToString();
-
         GetExitDoorState();
     }
 
     public void WinLvl()
     {
-
-        //PlayerPrefs.GetInt("PlayerScore", CollectedCoins);
-        
-
         PlayerPrefs.SetInt("levelReached", levelToUnlock);
         Menu.Instance.currentState = Menu.MenuStates.Completed;
-        
     }
-
 }

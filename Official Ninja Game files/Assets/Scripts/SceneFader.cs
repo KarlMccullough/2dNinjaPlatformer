@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 
-public class SceneFader : MonoBehaviour {
-
+public class SceneFader : MonoBehaviour
+{
     private static SceneFader instance;
 
     public static SceneFader Instance
@@ -21,7 +19,6 @@ public class SceneFader : MonoBehaviour {
         }
     }
 
-    
     public Image img;
     public AnimationCurve curve;
 
@@ -29,8 +26,6 @@ public class SceneFader : MonoBehaviour {
     {
         StartCoroutine(FadeIn());
     }
-
-   
 
     public void FadeTo(int scene)
     {

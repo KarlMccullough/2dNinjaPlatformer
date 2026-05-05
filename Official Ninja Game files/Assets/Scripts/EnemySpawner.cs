@@ -1,28 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour {
-
+public class EnemySpawner : MonoBehaviour
+{
     public GameObject enemy;
     float randx;
     Vector2 whereToSpawn;
     public float spawnrate = 3f;
     float nextSpawn = 0.0f;
 
-
-
     public int enemynum = 0;
 
-    // Use this for initialization
-    void Start () {
-        
-		
-	}
-    
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+    void FixedUpdate()
+    {
         if (Time.time > nextSpawn && enemynum <= 5)
         {
             nextSpawn = Time.time + spawnrate;
@@ -30,25 +19,18 @@ public class EnemySpawner : MonoBehaviour {
             whereToSpawn = new Vector2(randx, transform.position.y);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
             enemynum = enemynum + 1;
-
         }
-
-
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
-
-
         }
-        if (other.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
             Physics2D.IgnoreCollision(GetComponent<Collider2D>(), other, true);
-
-
         }
-
     }
 }

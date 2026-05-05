@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour {
-
+public class LevelGenerator : MonoBehaviour
+{
     public Texture2D map;
 
     public ColorToPrefab[] ColorMappings;
@@ -28,7 +28,6 @@ public class LevelGenerator : MonoBehaviour {
 
         if (pixelColor.a == 0)
         {
-            //pixel transparent ignore it
             return;
         }
 

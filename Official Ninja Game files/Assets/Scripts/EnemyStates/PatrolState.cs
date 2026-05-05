@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PatrolState : IEnemyState
@@ -26,31 +24,22 @@ public class PatrolState : IEnemyState
         {
             enemy.ChangeState(new RangedState());
         }
-        
     }
 
     public void Exit()
     {
-        
     }
 
     public void OnTriggerEnter(Collider2D other)
     {
-        /*if (other.tag == "Edge")
-        {
-            enemy.ChangeDirection();
-        }*/
-        if (other.tag == "Knife")
+        if (other.CompareTag("Knife"))
         {
             enemy.Target = Player.Instance.gameObject;
-
         }
     }
 
     private void Patrol()
     {
-       
-
         patrolTimer += Time.deltaTime;
 
         if (patrolTimer >= patrolDuration)
@@ -58,6 +47,4 @@ public class PatrolState : IEnemyState
             enemy.ChangeState(new Idlestate());
         }
     }
-
-
 }

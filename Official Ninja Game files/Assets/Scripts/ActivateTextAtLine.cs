@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ActivateTextAtLine : MonoBehaviour {
-
+public class ActivateTextAtLine : MonoBehaviour
+{
     public TextAsset theText;
 
     public int startLine;
@@ -15,38 +12,27 @@ public class ActivateTextAtLine : MonoBehaviour {
     public Door door;
 
     public bool destroyWhenActivated;
-   
 
-    // Use this for initialization
-    void Start () {
+    void Start()
+    {
         theTextBox = FindObjectOfType<TextBoxManager>();
-		door = FindObjectOfType<Door>();
+        door = FindObjectOfType<Door>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-           
-            
             theTextBox.isActive = true;
-            
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
-           
+
             if (destroyWhenActivated)
             {
                 Destroy(gameObject);
             }
-
         }
-        
     }
 }

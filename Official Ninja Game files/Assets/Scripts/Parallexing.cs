@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Parallexing : MonoBehaviour {
-
+public class Parallexing : MonoBehaviour
+{
     public Transform[] backgrounds;
     private float[] parallaxScales;
     public float smoothing;
 
     private Vector3 previousCameraposition;
 
-	// Use this for initialization
-	void Start () {
+    void Start()
+    {
         previousCameraposition = transform.position;
 
         parallaxScales = new float[backgrounds.Length];
@@ -19,10 +17,10 @@ public class Parallexing : MonoBehaviour {
         {
             parallaxScales[i] = backgrounds[i].position.z * -1;
         }
-	}
-	
-	// Update is called once per frame
-	void LateUpdate () {
+    }
+
+    void LateUpdate()
+    {
         for (int i = 0; i < backgrounds.Length; i++)
         {
             Vector3 parallax = (previousCameraposition - transform.position) * (parallaxScales[i] / smoothing);
@@ -31,7 +29,5 @@ public class Parallexing : MonoBehaviour {
         }
 
         previousCameraposition = transform.position;
-
-		
-	}
+    }
 }

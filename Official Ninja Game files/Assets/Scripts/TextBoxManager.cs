@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityStandardAssets.CrossPlatformInput;
 
-public class TextBoxManager : MonoBehaviour {
-
+public class TextBoxManager : MonoBehaviour
+{
     public GameObject textBox;
 
     public Text theText;
@@ -14,8 +12,7 @@ public class TextBoxManager : MonoBehaviour {
     private bool cancelTyping = false;
 
     public float typeSpeed;
-    
-    
+
     public TextAsset textFile;
     public string[] textLines;
 
@@ -23,17 +20,14 @@ public class TextBoxManager : MonoBehaviour {
     public int endAtLine;
 
     public Player player;
-    
 
     public bool isActive;
 
     public bool stopPlayer;
 
-    // Use this for initialization
     void Start()
     {
         player = FindObjectOfType<Player>();
-       
 
         if (textFile != null)
         {
@@ -53,8 +47,6 @@ public class TextBoxManager : MonoBehaviour {
         {
             DisableTextBox();
         }
-
-
     }
 
     void Update()
@@ -63,7 +55,6 @@ public class TextBoxManager : MonoBehaviour {
         {
             return;
         }
-        //theText.text = textLines[currentLine];
 
         if (CrossPlatformInputManager.GetButtonDown("mouse 0") || Input.GetKeyDown("mouse 0"))
         {
@@ -104,7 +95,6 @@ public class TextBoxManager : MonoBehaviour {
         cancelTyping = false;
     }
 
-
     public void EnableTextBox()
     {
         textBox.SetActive(true);
@@ -112,9 +102,7 @@ public class TextBoxManager : MonoBehaviour {
         StartCoroutine(TextScroll(textLines[currentLine]));
         if (stopPlayer == true)
         {
-            
             player.canMove = false;
-            
         }
     }
 
@@ -122,9 +110,7 @@ public class TextBoxManager : MonoBehaviour {
     {
         textBox.SetActive(false);
         isActive = false;
-
         player.canMove = true;
-
     }
 
     public void ReloadScript(TextAsset theText)
@@ -135,6 +121,4 @@ public class TextBoxManager : MonoBehaviour {
             textLines = (theText.text.Split('\n'));
         }
     }
-
 }
-

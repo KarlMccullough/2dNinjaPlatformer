@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Knife : MonoBehaviour {
-
+public class Knife : MonoBehaviour
+{
     [SerializeField]
     private float speed;
 
@@ -12,19 +10,17 @@ public class Knife : MonoBehaviour {
 
     private Vector2 direction;
 
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-	}
+    }
 
     void FixedUpdate()
     {
-        rb.velocity = direction * speed;
+        rb.linearVelocity = direction * speed;
     }
 
-   public void Intialize(Vector2 direction)
+    public void Intialize(Vector2 direction)
     {
         this.direction = direction;
     }
@@ -33,6 +29,4 @@ public class Knife : MonoBehaviour {
     {
         Destroy(gameObject);
     }
-
-
 }

@@ -1,5 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeState : IEnemyState
@@ -27,17 +25,14 @@ public class MeleeState : IEnemyState
         {
             enemy.ChangeState(new Idlestate());
         }
-        
     }
 
     public void Exit()
     {
-        
     }
 
     public void OnTriggerEnter(Collider2D other)
     {
-        
     }
 
     private void Attack()
@@ -55,7 +50,5 @@ public class MeleeState : IEnemyState
             canAttack = false;
             enemy.MyAnimator.SetTrigger("attack");
         }
-
-
     }
 }

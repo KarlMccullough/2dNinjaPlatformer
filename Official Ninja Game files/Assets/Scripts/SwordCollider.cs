@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SwordCollider : MonoBehaviour {
-
+public class SwordCollider : MonoBehaviour
+{
     [SerializeField]
     private string targetTag;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == targetTag)
+        if (other.CompareTag(targetTag))
         {
             GetComponent<Collider2D>().enabled = false;
-
         }
     }
 }
