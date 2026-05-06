@@ -1,11 +1,18 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ButtonHandler : MonoBehaviour
+public class ButtonHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public string Name;
 
-    void OnEnable()
+    public void OnPointerDown(PointerEventData eventData)
     {
+        CrossPlatformInputManager.SetButtonDown(Name);
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        CrossPlatformInputManager.SetButtonUp(Name);
     }
 
     public void SetDownState()
@@ -31,9 +38,5 @@ public class ButtonHandler : MonoBehaviour
     public void SetAxisNegativeState()
     {
         CrossPlatformInputManager.SetAxisNegative(Name);
-    }
-
-    public void Update()
-    {
     }
 }

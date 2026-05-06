@@ -56,7 +56,7 @@ public class TextBoxManager : MonoBehaviour
             return;
         }
 
-        if (CrossPlatformInputManager.GetButtonDown("mouse 0") || Input.GetKeyDown("mouse 0"))
+        if (Input.GetMouseButtonDown(0))
         {
             if (!isTyping)
             {

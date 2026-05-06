@@ -10,6 +10,7 @@ public class AxisTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     AxisTouchButton m_PairedWith;
     CrossPlatformInputManager.VirtualAxis m_Axis;
+    bool m_Pressed;
 
     void OnEnable()
     {
@@ -41,6 +42,14 @@ public class AxisTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         }
     }
 
+    void Update()
+    {
+        if (m_Pressed)
+        {
+            m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));
+        }
+    }
+
     void OnDisable()
     {
         m_Axis.Remove();
@@ -52,11 +61,12 @@ public class AxisTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         {
             FindPairedButton();
         }
-        m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));
+        m_Pressed = true;
     }
 
     public void OnPointerUp(PointerEventData data)
     {
-        m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
+        m_Pressed = false;
+        m_Axis.Update(0);
     }
 }

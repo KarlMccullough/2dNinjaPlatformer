@@ -106,6 +106,16 @@ public class Player : Character
         Rb = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (!canMove || TakingDamage || IsDead)
+        {
+            return;
+        }
+
+        HandleInput();
+    }
+
     void FixedUpdate()
     {
         if (PlayerPrefs.HasKey("CurrentLevel"))
@@ -120,11 +130,17 @@ public class Player : Character
 
         if (!TakingDamage && !IsDead)
         {
-            float horizontal = Input.GetAxis("Horizontal");
-            horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            if (horizontal == 0)
+            {
+                horizontal = Input.GetAxisRaw("Horizontal");
+            }
 
-            float vertical = Input.GetAxis("Vertical");
-            vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            if (vertical == 0)
+            {
+                vertical = Input.GetAxisRaw("Vertical");
+            }
 
             if (transform.position.y <= -15f)
             {
@@ -132,8 +148,6 @@ public class Player : Character
                 healthStat.CurrentVal -= 100;
                 Death();
             }
-
-            HandleInput();
 
             OnGround = IsGrounded();
 
@@ -189,22 +203,22 @@ public class Player : Character
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !IsFalling || CrossPlatformInputManager.GetButtonDown("jump") && !IsFalling)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || CrossPlatformInputManager.GetButtonDown("jump")) && !IsFalling)
         {
             MyAnimator.SetTrigger("jump");
         }
 
-        if (Input.GetKeyDown(KeyCode.P) || CrossPlatformInputManager.GetButtonDown("attack"))
+        if (Input.GetKeyDown(KeyCode.J) || CrossPlatformInputManager.GetButtonDown("attack"))
         {
             MyAnimator.SetTrigger("attack");
         }
 
-        if (Input.GetKeyDown(KeyCode.S) || CrossPlatformInputManager.GetButtonDown("slide"))
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || CrossPlatformInputManager.GetButtonDown("slide")) && !IsFalling)
         {
             MyAnimator.SetTrigger("slide");
         }
 
-        if (Input.GetKeyDown(KeyCode.O) || CrossPlatformInputManager.GetButtonDown("throw"))
+        if (Input.GetKeyDown(KeyCode.K) || CrossPlatformInputManager.GetButtonDown("throw"))
         {
             MyAnimator.SetTrigger("throw");
         }

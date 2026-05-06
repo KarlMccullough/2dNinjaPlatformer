@@ -19,6 +19,8 @@ public static class CrossPlatformInputManager
         s_HardwareInput = new StandaloneInput();
 #if MOBILE_INPUT
         activeInput = s_TouchInput;
+#elif UNITY_WEBGL
+        activeInput = s_TouchInput;
 #else
         activeInput = s_HardwareInput;
 #endif

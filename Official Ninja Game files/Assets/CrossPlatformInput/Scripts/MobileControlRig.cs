@@ -59,8 +59,21 @@ public class MobileControlRig : MonoBehaviour
     {
 #if MOBILE_INPUT
         EnableControlRig(true);
+        CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Touch);
+#elif UNITY_WEBGL && !UNITY_EDITOR
+        EnableControlRig(true);
+        CrossPlatformInputManager.SwitchActiveInputMethod(CrossPlatformInputManager.ActiveInputMethod.Touch);
 #else
         EnableControlRig(false);
+#endif
+    }
+
+    private bool IsMobileBrowser()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        return Input.touchSupported;
+#else
+        return false;
 #endif
     }
 
