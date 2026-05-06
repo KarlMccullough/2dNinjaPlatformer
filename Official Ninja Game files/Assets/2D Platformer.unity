@@ -13533,9 +13533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10acc5ea6b7ae2b4aa37fead3abc9fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xMax: 130
+  xMax: 86
   yMax: 70
-  xMin: 1
+  xMin: 2
   yMin: 1.2
 --- !u!114 &856140678
 MonoBehaviour:

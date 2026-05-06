@@ -81,6 +81,9 @@ public class AudioManager : MonoBehaviour
             sound[i].SetSource(_go.AddComponent<AudioSource>());
         }
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+        WebGLAudioResumeHelper.Init();
+#endif
         PlaySound("Background Music");
     }
 
