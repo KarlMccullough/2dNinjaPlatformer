@@ -94,7 +94,10 @@ public class Menu : MonoBehaviour
                 HelpWindow.SetActive(false);
                 MenuUI.SetActive(true);
                 CompletedWindow.SetActive(true);
-                levelButton.interactable = true;
+                if (levelButton != null)
+                {
+                    levelButton.interactable = true;
+                }
                 Time.timeScale = 0;
                 break;
         }
