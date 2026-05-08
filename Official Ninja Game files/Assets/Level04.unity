@@ -3272,7 +3272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 1365665571318432, guid: 22cc9e9cbd69ac7408e0eed6490c9230, type: 3}
-  nextLevel: Level02
+  nextLevel: Level05
   levelToUnlock: 6
   sceneFader: {fileID: 1357729572}
   coinTxt: {fileID: 1575523609}

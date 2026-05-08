@@ -124,7 +124,16 @@ public class GameManager1 : MonoBehaviour
 
     public void WinLvl()
     {
-        PlayerPrefs.SetInt("levelReached", levelToUnlock);
-        Menu.Instance.currentState = Menu.MenuStates.Completed;
+        int currentMax = PlayerPrefs.GetInt("levelReached", 2);
+        if (levelToUnlock > currentMax)
+        {
+            PlayerPrefs.SetInt("levelReached", levelToUnlock);
+            PlayerPrefs.Save();
+        }
+
+        if (Menu.Instance != null)
+        {
+            Menu.Instance.currentState = Menu.MenuStates.Completed;
+        }
     }
 }
